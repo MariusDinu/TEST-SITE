@@ -575,7 +575,7 @@ input[type="radio"][name="page"]{display:none}
     .then(function(res){ return res.text(); })
     .then(function(text){
       parseGalerii(text);
- console.log(galleries["carusel"]);
+
       initThumbnails();
       initPhotoCounts();
       initCarousel();
@@ -617,7 +617,7 @@ input[type="radio"][name="page"]{display:none}
 function initCarousel() {
     carouselSlides = [];
 
-    console.log(galleries["carusel"]);
+
 
     if (galleries["carusel"]) {
         galleries["carusel"].forEach(function(img) {
