@@ -1,0 +1,714 @@
+
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>V&A Mobilier la Comandă — Botoșani</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+:root{
+  --primary:#2C1810;
+  --accent:#B8860B;
+  --bg:#FFFFFF;
+  --bg-warm:#FDFBF8;
+  --bg-section:#F9F6F2;
+  --text:#333;
+  --text-light:#6B6B6B;
+  --text-muted:#999;
+  --border:#EDE8E2;
+  --whatsapp:#25D366;
+  --white:#FFF;
+}
+
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;overflow-x:hidden}
+
+input[type="radio"][name="page"]{display:none}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,0.97);backdrop-filter:blur(10px);padding:0 60px;display:flex;align-items:center;justify-content:space-between;height:76px;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.logo-icon{width:40px;height:40px;background:var(--accent);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:14px;font-family:'Playfair Display',serif;flex-shrink:0}
+.logo-text{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--primary);white-space:nowrap}
+.logo-text span{display:block;font-family:'Inter',sans-serif;font-size:11px;font-weight:400;color:var(--text-muted);letter-spacing:2px;text-transform:uppercase}
+.nav-links{display:flex;flex-shrink:0}
+.nav-links label{color:var(--text);padding:26px 22px;cursor:pointer;font-size:13px;font-weight:500;letter-spacing:.5px;transition:color .3s;border-bottom:2px solid transparent;margin-bottom:-1px;white-space:nowrap}
+.nav-links label:hover{color:var(--accent)}
+#page-acasa:checked~.nav .nav-links label[for="page-acasa"],
+#page-despre:checked~.nav .nav-links label[for="page-despre"],
+#page-proiecte:checked~.nav .nav-links label[for="page-proiecte"],
+#page-contact:checked~.nav .nav-links label[for="page-contact"]{color:var(--accent);border-bottom-color:var(--accent)}
+
+/* HAMBURGER */
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:10px;z-index:1001}
+.hamburger span{display:block;width:24px;height:2px;background:var(--primary);transition:all .3s}
+.mobile-menu{display:none}
+
+.page{display:none}
+#page-acasa:checked~.page-acasa,
+#page-despre:checked~.page-despre,
+#page-proiecte:checked~.page-proiecte,
+#page-contact:checked~.page-contact{display:block}
+
+.hero{min-height:88vh;display:flex;align-items:center;justify-content:center;text-align:center;background:#F5F0EA;padding:60px 40px}
+.hero-content{max-width:680px}
+.hero-badge{display:inline-block;background:var(--white);border:1px solid var(--border);padding:8px 20px;font-size:12px;font-weight:500;color:var(--accent);letter-spacing:2px;text-transform:uppercase;margin-bottom:30px}
+.hero h1{font-family:'Playfair Display',serif;color:var(--primary);font-size:50px;font-weight:700;line-height:1.15;margin-bottom:24px}
+.hero h1 em{color:var(--accent);font-style:normal;display:block}
+.hero p{color:var(--text-light);font-size:17px;margin-bottom:40px;line-height:1.8;max-width:500px;margin-left:auto;margin-right:auto}
+.btn{display:inline-block;padding:16px 38px;font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase;cursor:pointer;transition:all .3s;text-decoration:none}
+.btn-primary{background:var(--primary);color:var(--white);border:2px solid var(--primary)}
+.btn-primary:hover{background:transparent;color:var(--primary)}
+
+.section-header{text-align:center;margin-bottom:60px}
+.section-label{font-size:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:16px}
+.section-title{font-family:'Playfair Display',serif;font-size:36px;color:var(--primary);margin-bottom:16px;line-height:1.3}
+.section-subtitle{color:var(--text-light);font-size:15px;max-width:500px;margin:0 auto}
+
+.features-section{background:var(--bg);padding:100px 60px}
+.features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;max-width:1100px;margin:0 auto}
+.feature-card{text-align:center;padding:40px 30px}
+.feature-icon{width:56px;height:56px;margin:0 auto 24px;display:flex;align-items:center;justify-content:center}
+.feature-icon svg{width:40px;height:40px;stroke:var(--accent);fill:none;stroke-width:1.5}
+.feature-card h4{font-family:'Playfair Display',serif;font-size:20px;color:var(--primary);margin-bottom:12px}
+.feature-card p{color:var(--text-light);font-size:14px;line-height:1.8}
+
+.about-section{background:var(--bg-section);padding:100px 60px}
+.about-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:80px;max-width:1100px;margin:0 auto;align-items:center}
+.about-video{position:relative;width:100%;padding-bottom:75%;background:#000;border:1px solid var(--border);overflow:hidden}
+.about-video iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none}
+.about-content h2{font-family:'Playfair Display',serif;font-size:34px;color:var(--primary);margin-bottom:24px;line-height:1.3}
+.about-content p{color:var(--text-light);font-size:15px;margin-bottom:20px;line-height:1.9}
+.values-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:36px}
+.value-item{padding:20px;background:var(--white);border:1px solid var(--border)}
+.value-item h5{font-size:14px;font-weight:600;color:var(--primary);margin-bottom:4px}
+.value-item p{font-size:13px;color:var(--text-muted);margin:0}
+
+.video-section{padding:80px 60px;max-width:900px;margin:0 auto;text-align:center}
+.video-section h2{font-family:'Playfair Display',serif;font-size:30px;color:var(--primary);margin-bottom:8px}
+.video-section p{color:var(--text-muted);font-size:14px;margin-bottom:30px}
+.video-wrapper{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;background:#000}
+.video-wrapper iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none}
+
+.carousel-wrap{background:var(--bg-section);padding:80px 60px}
+.carousel-wrap h3{font-family:'Playfair Display',serif;font-size:24px;color:var(--primary);margin-bottom:24px;text-align:center}
+.carousel-container{position:relative;display:flex;align-items:center;justify-content:center;gap:16px;height:340px;overflow:hidden;max-width:1200px;margin:0 auto}
+.carousel-btn{width:48px;height:48px;background:var(--white);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:10;transition:all .3s;font-size:22px;color:var(--primary);flex-shrink:0}
+.carousel-btn:hover{background:var(--primary);color:var(--white);border-color:var(--primary)}
+.carousel-viewport{display:flex;align-items:center;justify-content:center;gap:16px;flex:1;overflow:hidden;height:100%}
+.carousel-slide{position:relative;overflow:hidden;border:1px solid var(--border);background:var(--bg-section);transition:all .4s ease;flex-shrink:0}
+.carousel-slide img{width:100%;height:100%;object-fit:cover}
+.carousel-slide .slide-label{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(44,24,16,.85));color:white;padding:30px 14px 12px;font-size:12px;font-weight:500;opacity:0;transition:opacity .4s}
+.carousel-slide.active .slide-label{opacity:1}
+.carousel-slide.side{width:220px;height:180px;opacity:.6;filter:brightness(.8)}
+.carousel-slide.active{width:420px;height:300px;opacity:1;filter:none;box-shadow:0 12px 40px rgba(0,0,0,.12)}
+
+.gallery-section{padding:80px 60px;max-width:1200px;margin:0 auto}
+.category-block{margin-bottom:50px}
+.category-block h3{font-family:'Playfair Display',serif;font-size:22px;color:var(--primary);margin-bottom:20px;padding-bottom:10px;border-bottom:1px solid var(--border)}
+.subcategory-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
+.subcat-card{background:var(--bg-section);border:1px solid var(--border);padding:16px;cursor:pointer;transition:all .3s;text-align:center}
+.subcat-card:hover{border-color:var(--accent);transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.06)}
+.subcat-card .thumb{width:100%;aspect-ratio:4/3;background:linear-gradient(135deg,#F5F0EA,#EDE5DB);margin-bottom:10px;overflow:hidden}
+.subcat-card .thumb img{width:100%;height:100%;object-fit:cover}
+.subcat-card span{font-size:13px;color:var(--text);font-weight:600;line-height:1.4;display:block}
+.subcat-card small{font-size:11px;color:var(--text-muted);margin-top:4px;display:block}
+
+/* LIGHTBOX */
+.lightbox{display:none;position:fixed;inset:0;background:rgba(10,8,6,.92);z-index:9999;flex-direction:column;align-items:center;justify-content:center;backdrop-filter:blur(6px)}
+.lightbox.open{display:flex}
+.lightbox-header{position:absolute;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:20px 30px;z-index:10}
+.lightbox-title{font-family:'Playfair Display',serif;font-size:18px;color:rgba(255,255,255,.9)}
+.lightbox-counter{font-size:13px;color:rgba(255,255,255,.6)}
+.lightbox-close{width:40px;height:40px;display:flex;align-items:center;justify-content:center;cursor:pointer;color:rgba(255,255,255,.7);font-size:26px;transition:color .3s;border:1px solid rgba(255,255,255,.2)}
+.lightbox-close:hover{color:white;border-color:rgba(255,255,255,.5)}
+.lightbox-main{display:flex;align-items:center;justify-content:center;flex:1;width:100%;padding:80px 20px 120px;gap:20px}
+.lightbox-arrow{width:50px;height:50px;display:flex;align-items:center;justify-content:center;cursor:pointer;color:rgba(255,255,255,.7);font-size:28px;transition:all .3s;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.05);flex-shrink:0}
+.lightbox-arrow:hover{color:white;background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.4)}
+.lightbox-img-wrap{flex:1;max-width:700px;max-height:70vh;display:flex;align-items:center;justify-content:center}
+.lightbox-img-wrap img{max-width:100%;max-height:70vh;object-fit:contain;box-shadow:0 20px 60px rgba(0,0,0,.5);border:2px solid rgba(255,255,255,.1)}
+.lightbox-thumbs{position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,.6);padding:14px 30px;display:flex;align-items:center;justify-content:center;gap:8px;overflow-x:auto}
+.lightbox-thumbs img{width:60px;height:45px;object-fit:cover;cursor:pointer;opacity:.4;transition:all .3s;border:2px solid transparent;flex-shrink:0}
+.lightbox-thumbs img:hover{opacity:.7}
+.lightbox-thumbs img.active{opacity:1;border-color:var(--accent)}
+
+/* CONTACT */
+.contact-section{background:var(--bg-section);padding:100px 60px}
+.contact-inner{max-width:1100px;margin:0 auto}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;margin-top:50px}
+.contact-info-block h3{font-family:'Playfair Display',serif;font-size:22px;color:var(--primary);margin-bottom:30px}
+.contact-item{display:flex;gap:16px;margin-bottom:24px;align-items:flex-start}
+.contact-icon{width:44px;height:44px;background:var(--white);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.contact-icon svg{width:20px;height:20px;stroke:var(--accent);fill:none;stroke-width:1.5}
+.contact-details strong{display:block;font-size:13px;font-weight:600;color:var(--primary);margin-bottom:2px}
+.contact-details span{font-size:14px;color:var(--text-light)}
+.whatsapp-block{background:var(--white);border:1px solid var(--border);padding:32px;margin-top:36px}
+.whatsapp-block h4{font-size:16px;font-weight:600;color:var(--primary);margin-bottom:8px}
+.whatsapp-block p{font-size:14px;color:var(--text-light);margin-bottom:20px}
+.btn-whatsapp{display:inline-flex;align-items:center;gap:8px;background:var(--whatsapp);color:white;padding:14px 28px;font-size:14px;font-weight:600;text-decoration:none;transition:transform .3s}
+.btn-whatsapp:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(37,211,102,.3)}
+.whatsapp-note{margin-top:12px;font-size:13px;color:var(--text-muted)}
+.map-container{background:var(--white);border:1px solid var(--border);height:100%;min-height:400px;position:relative;overflow:hidden}
+.map-container iframe{position:absolute;inset:0;width:100%;height:100%;border:none}
+
+.footer{background:var(--white);border-top:1px solid var(--border);padding:30px 60px;text-align:center;font-size:13px;color:var(--text-muted)}
+
+/* ===== RESPONSIVE MOBILE ===== */
+@media(max-width:768px){
+  /* NAV MOBILE */
+  .nav{padding:0 16px;height:60px}
+  .logo-icon{width:34px;height:34px;font-size:12px}
+  .logo-text{font-size:15px}
+  .logo-text span{font-size:9px;letter-spacing:1.5px}
+  .logo{gap:8px}
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  
+  .mobile-menu{
+    display:none;
+    position:fixed;
+    top:60px;
+    left:0;
+    right:0;
+    background:var(--white);
+    border-bottom:1px solid var(--border);
+    z-index:999;
+    padding:10px 0;
+    box-shadow:0 10px 30px rgba(0,0,0,.08)
+  }
+  .mobile-menu.open{display:block}
+  .mobile-menu label{
+    display:block;
+    padding:14px 24px;
+    font-size:14px;
+    font-weight:500;
+    color:var(--text);
+    cursor:pointer;
+    transition:background .2s
+  }
+  .mobile-menu label:hover{background:var(--bg-section)}
+
+  /* HERO */
+  .hero{min-height:70vh;padding:40px 20px}
+  .hero h1{font-size:30px}
+  .hero-badge{font-size:10px;padding:6px 14px;letter-spacing:1.5px}
+  .hero p{font-size:15px;margin-bottom:30px}
+  .btn{padding:14px 28px;font-size:12px}
+
+  /* FEATURES */
+  .features-section{padding:60px 20px}
+  .features-grid{grid-template-columns:1fr;gap:20px}
+  .feature-card{padding:24px 20px}
+  .section-title{font-size:26px}
+
+  /* DESPRE */
+  .about-section{padding:60px 20px}
+  .about-grid{grid-template-columns:1fr;gap:30px}
+  .about-content h2{font-size:26px}
+  .values-grid{grid-template-columns:1fr}
+
+  /* VIDEO */
+  .video-section{padding:40px 16px}
+  .video-section h2{font-size:22px}
+
+  /* CAROUSEL */
+  .carousel-wrap{padding:40px 16px}
+  .carousel-wrap h3{font-size:20px}
+  .carousel-container{height:220px;gap:8px}
+  .carousel-btn{width:36px;height:36px;font-size:18px}
+  .carousel-slide.active{width:200px;height:180px}
+  .carousel-slide.side{width:100px;height:120px}
+  .carousel-slide .slide-label{font-size:10px;padding:20px 8px 8px}
+
+  /* GALLERY */
+  .gallery-section{padding:40px 16px}
+  .section-header{margin-bottom:40px}
+  .subcategory-grid{grid-template-columns:repeat(2,1fr);gap:10px}
+  .subcat-card{padding:10px}
+  .subcat-card span{font-size:12px}
+  .category-block h3{font-size:18px}
+
+  /* LIGHTBOX MOBILE */
+  .lightbox-header{padding:12px 16px}
+  .lightbox-title{font-size:14px}
+  .lightbox-counter{font-size:11px}
+  .lightbox-close{width:34px;height:34px;font-size:20px}
+  .lightbox-main{padding:60px 10px 90px;gap:8px}
+  .lightbox-arrow{width:36px;height:36px;font-size:20px}
+  .lightbox-img-wrap img{max-height:55vh}
+  .lightbox-thumbs{padding:10px 12px;gap:6px}
+  .lightbox-thumbs img{width:44px;height:34px}
+
+  /* CONTACT */
+  .contact-section{padding:60px 20px}
+  .contact-grid{grid-template-columns:1fr;gap:30px}
+  .map-container{min-height:280px}
+  .whatsapp-block{padding:24px}
+
+  /* FOOTER */
+  .footer{padding:20px 16px;font-size:12px}
+}
+
+@media(max-width:400px){
+  .hero h1{font-size:26px}
+  .carousel-slide.active{width:170px;height:150px}
+  .carousel-slide.side{width:80px;height:100px}
+  .subcategory-grid{grid-template-columns:1fr 1fr;gap:8px}
+}
+</style>
+</head>
+<body>
+
+<input type="radio" name="page" id="page-acasa" checked>
+<input type="radio" name="page" id="page-despre">
+<input type="radio" name="page" id="page-proiecte">
+<input type="radio" name="page" id="page-contact">
+
+<nav class="nav">
+  <div class="logo">
+    <div class="logo-icon">V&A</div>
+    <div class="logo-text">V&A Mobilier<span>La Comandă</span></div>
+  </div>
+  <div class="nav-links">
+    <label for="page-acasa">Acasă</label>
+    <label for="page-despre">Despre Noi</label>
+    <label for="page-proiecte">Proiecte</label>
+    <label for="page-contact">Contact</label>
+  </div>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <label for="page-acasa" onclick="closeMenu()">Acasă</label>
+  <label for="page-despre" onclick="closeMenu()">Despre Noi</label>
+  <label for="page-proiecte" onclick="closeMenu()">Proiecte</label>
+  <label for="page-contact" onclick="closeMenu()">Contact</label>
+</div>
+
+<!-- ACASĂ -->
+<div class="page page-acasa">
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">✦ Din Botoșani, pentru casa ta</div>
+      <h1>Mobilier la comandă,<em>creat cu suflet</em></h1>
+      <p>Creăm piese unice de mobilier, adaptate perfect spațiului și stilului tău. Fiecare detaliu contează.</p>
+      <label for="page-proiecte" class="btn btn-primary">Vezi Proiectele Noastre</label>
+    </div>
+  </section>
+  <section class="features-section">
+    <div class="section-header">
+      <div class="section-label">De ce să ne alegi</div>
+      <h2 class="section-title">Mobilier creat cu pasiune,<br>livrat cu mândrie</h2>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+        <h4>Materiale Premium</h4>
+        <p>Folosim doar materiale de cea mai bună calitate, selectate cu grijă pentru fiecare proiect — durabilitate maximă și finisaje impecabile.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div>
+        <h4>Atenție la Detalii</h4>
+        <p>Fiecare îmbinare, fiecare finisaj este realizat cu precizie și dedicare maximă.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+        <h4>Făcut cu Suflet</h4>
+        <p>Suntem o familie care pune pasiune în fiecare proiect. Mobilierul nostru poartă o poveste.</p>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">© 2026 V&A Mobilier la Comandă — Orășeni-Deal, Botoșani.</footer>
+</div>
+
+<!-- DESPRE NOI -->
+<div class="page page-despre">
+  <section class="about-section">
+    <div class="about-grid">
+      <div class="about-video">
+        <iframe src="https://streamable.com/e/q58fqr" allowfullscreen></iframe>
+      </div>
+      <div class="about-content">
+        <h2>Povestea Noastră</h2>
+        <p>Suntem Vasile și Alina, doi soți din Botoșani uniți de pasiunea pentru lemn și design. Am pornit această afacere din dorința de a crea mobilier care să transforme casele oamenilor în cămine cu adevărat speciale.</p>
+        <p>Cu ani de experiență în prelucrarea lemnului și un ochi atent pentru detalii, fiecare piesă pe care o creăm este rezultatul muncii noastre dedicate.</p>
+        <p>Credem că mobilierul bun nu este doar funcțional — el trebuie să spună o poveste și să reziste generațiilor.</p>
+        <div class="values-grid">
+          <div class="value-item"><h5>✦ Calitate</h5><p>Materiale premium, finisaje impecabile</p></div>
+          <div class="value-item"><h5>✦ Unicitate</h5><p>Fiecare proiect e unic, ca și clientul</p></div>
+          <div class="value-item"><h5>✦ Precizie</h5><p>Atenție maximă la fiecare detaliu</p></div>
+          <div class="value-item"><h5>✦ Pasiune</h5><p>Iubim ceea ce facem, și se vede</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">© 2026 V&A Mobilier la Comandă — Orășeni-Deal, Botoșani.</footer>
+</div>
+
+<!-- PROIECTE -->
+<div class="page page-proiecte">
+
+  <section class="video-section">
+    <h2>Prezentare Video</h2>
+    <p>Descoperă povestea din spatele fiecărui proiect</p>
+    <div class="video-wrapper">
+      <iframe src="https://streamable.com/e/q58fqr" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <div class="carousel-wrap">
+    <h3>Proiecte de Referință</h3>
+    <div class="carousel-container" id="carousel">
+      <button class="carousel-btn" id="prevBtn">&#8249;</button>
+      <div class="carousel-viewport" id="carouselViewport"></div>
+      <button class="carousel-btn" id="nextBtn">&#8250;</button>
+    </div>
+  </div>
+
+  <section class="gallery-section">
+    <div class="section-header">
+      <div class="section-label">Portofoliu Complet</div>
+      <h2 class="section-title">Galerie pe Categorii</h2>
+      <p class="section-subtitle">Click pe subcategorie pentru a vedea toate pozele</p>
+    </div>
+
+    <div class="category-block">
+      <h3>🍳 Bucătărie</h3>
+      <div class="subcategory-grid">
+        <div class="subcat-card" onclick="openLightbox('buc-complete')">
+          <div class="thumb"><img src="proiecte/FB_IMG_1784874311195.jpg" alt=""></div>
+          <span>Bucătării complete</span><small>26 fotografii</small>
+        </div>
+        <div class="subcat-card" onclick="openLightbox('buc-insula')">
+          <div class="thumb"><img src="proiecte/FB_IMG_1784874564327.jpg" alt=""></div>
+          <span>Cu insulă / bar</span><small>3 fotografii</small>
+        </div>
+        <div class="subcat-card" onclick="openLightbox('buc-detalii')">
+          <div class="thumb"><img src="proiecte/FB_IMG_1784874391800.jpg" alt=""></div>
+          <span>Detalii / Corpuri</span><small>11 fotografii</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="category-block">
+      <h3>🛏️ Dormitor</h3>
+      <div class="subcategory-grid">
+        <div class="subcat-card" onclick="openLightbox('dorm-paturi')">
+          <div class="thumb"><img src="proiecte/FB_IMG_1784873992595.jpg" alt=""></div>
+          <span>Paturi</span><small>11 fotografii</small>
+        </div>
+        <div class="subcat-card" onclick="openLightbox('dorm-dulapuri')">
+          <div class="thumb"><img src="proiecte/FB_IMG_1784873841575.jpg" alt=""></div>
+          <span>Dulapuri</span><small>13 fotografii</small>
+        </div>
+        <div class="subcat-card" onclick="openLightbox('dorm-machiaj')">
+          <div class="thumb"><img src="proiecte/FB_IMG_1784874178645.jpg" alt=""></div>
+          <span>Masă de machiaj</span><small>4 fotografii</small>
+        </div>
+        <div class="subcat-card" onclick="openLightbox('dorm-noptiere')">
+          <div class="thumb"><img src="proiecte/FB_IMG_1784873845170.jpg" alt=""></div>
+          <span>Noptiere</span><small>3 fotografii</small>
+        </div>
+        <div class="subcat-card" onclick="openLightbox('dorm-comode')">
+          <div class="thumb"><img src="proiecte/FB_IMG_1784873996459.jpg" alt=""></div>
+          <span>Comode</span><small>2 fotografii</small>
+        </div>
+        <div class="subcat-card" onclick="openLightbox('dorm-dressing')">
+          <div class="thumb"><img src="proiecte/FB_IMG_1784873981827.jpg" alt=""></div>
+          <span>Dressing / Walk-in</span><small>4 fotografii</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="category-block">
+      <h3>🛋️ Living</h3>
+      <div class="subcategory-grid">
+        <div class="subcat-card" onclick="openLightbox('liv-tv')">
+          <div class="thumb"><img src="proiecte/FB_IMG_1784874492855.jpg" alt=""></div>
+          <span>Mobilier TV</span><small>6 fotografii</small>
+        </div>
+        <div class="subcat-card" onclick="openLightbox('liv-biblioteci')">
+          <div class="thumb"><img src="proiecte/FB_IMG_1784874506922.jpg" alt=""></div>
+          <span>Biblioteci / Etajere</span><small>3 fotografii</small>
+        </div>
+        <div class="subcat-card" onclick="openLightbox('liv-open')">
+          <div class="thumb"><img src="proiecte/Messenger_creation_938F0997.jpeg" alt=""></div>
+          <span>Open-plan</span><small>2 fotografii</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="category-block">
+      <h3>🚪 Hol / Intrare</h3>
+      <div class="subcategory-grid">
+        <div class="subcat-card" onclick="openLightbox('hol-cuiere')">
+          <div class="thumb"><img src="proiecte/FB_IMG_1784873865135.jpg" alt=""></div>
+          <span>Cuiere</span><small>5 fotografii</small>
+        </div>
+        <div class="subcat-card" onclick="openLightbox('hol-bancheta')">
+          <div class="thumb"><img src="proiecte/FB_IMG_1784874053491.jpg" alt=""></div>
+          <span>Banchetă + dulap</span><small>2 fotografii</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="category-block">
+      <h3>📚 Birou / Home Office</h3>
+      <div class="subcategory-grid">
+        <div class="subcat-card" onclick="openLightbox('birou-all')">
+          <div class="thumb"><img src="proiecte/FB_IMG_1784873921794.jpg" alt=""></div>
+          <span>Birouri</span><small>8 fotografii</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="category-block">
+      <h3>🧒 Cameră Copii</h3>
+      <div class="subcategory-grid">
+        <div class="subcat-card" onclick="openLightbox('copii-all')">
+          <div class="thumb"><img src="proiecte/FB_IMG_1784874070311.jpg" alt=""></div>
+          <span>Mobilier copii</span><small>2 fotografii</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="category-block">
+      <h3>🚿 Baie</h3>
+      <div class="subcategory-grid">
+        <div class="subcat-card" onclick="openLightbox('baie-all')">
+          <div class="thumb"><img src="proiecte/FB_IMG_1784873974261.jpg" alt=""></div>
+          <span>Mobilier baie</span><small>1 fotografie</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-header">
+      <div class="lightbox-title" id="lbTitle"></div>
+      <div class="lightbox-counter" id="lbCounter"></div>
+      <div class="lightbox-close" onclick="closeLightbox()">✕</div>
+    </div>
+    <div class="lightbox-main">
+      <div class="lightbox-arrow" id="lbPrev">&#8249;</div>
+      <div class="lightbox-img-wrap">
+        <img id="lbImage" src="" alt="">
+      </div>
+      <div class="lightbox-arrow" id="lbNext">&#8250;</div>
+    </div>
+    <div class="lightbox-thumbs" id="lbThumbs"></div>
+  </div>
+
+  <footer class="footer">© 2026 V&A Mobilier la Comandă — Orășeni-Deal, Botoșani.</footer>
+</div>
+
+<!-- CONTACT -->
+<div class="page page-contact">
+  <section class="contact-section">
+    <div class="contact-inner">
+      <div class="section-header">
+        <div class="section-label">Contact</div>
+        <h2 class="section-title">Contactează-ne</h2>
+        <p class="section-subtitle">Hai să discutăm despre proiectul tău</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info-block">
+          <h3>Informații de contact</h3>
+          <div class="contact-item">
+            <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div class="contact-details"><strong>Adresă</strong><span>Sat Orășeni-Deal, Botoșani</span></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+            <div class="contact-details"><strong>Telefon / WhatsApp</strong><span>0757 338 500</span></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <div class="contact-details"><strong>Program</strong><span>L-V: 09:00-18:00 | S: 09:00-14:00</span></div>
+          </div>
+          <div class="whatsapp-block">
+            <h4>💬 Scrie-ne pe WhatsApp</h4>
+            <p>Răspundem rapid! Spune-ne ce mobilier dorești și revenim cu o ofertă.</p>
+            <a href="https://wa.me/40757338500" class="btn-whatsapp" target="_blank">Deschide WhatsApp</a>
+            <div class="whatsapp-note">sau sună direct: 0757 338 500</div>
+          </div>
+        </div>
+        <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10700!2d26.6833!3d47.7833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4734fc07d2c9e56d%3A0x400147d0508c970!2sOr%C4%83%C8%99eni-Deal!5e0!3m2!1sro!2sro!4v1700000000000" allowfullscreen loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">© 2026 V&A Mobilier la Comandă — Orășeni-Deal, Botoșani.</footer>
+</div>
+
+<script>
+(function(){
+  // MOBILE MENU
+  window.toggleMenu = function(){
+    document.getElementById('mobileMenu').classList.toggle('open');
+  };
+  window.closeMenu = function(){
+    document.getElementById('mobileMenu').classList.remove('open');
+  };
+
+  // PAGE CAROUSEL
+  var slides = [
+    {img:'proiecte/FB_IMG_1784874311195.jpg', label:'Bucătărie albă + blat lemn'},
+    {img:'proiecte/FB_IMG_1784874391800.jpg', label:'Bucătărie L albă'},
+    {img:'proiecte/FB_IMG_1784874564327.jpg', label:'Bucătărie cu insulă și bar'},
+    {img:'proiecte/FB_IMG_1784874588921.jpg', label:'Bucătărie modernă albastru'},
+    {img:'proiecte/FB_IMG_1784874492855.jpg', label:'Comodă TV'},
+    {img:'proiecte/FB_IMG_1784874534775.jpg', label:'Mobilier TV alb cu roz'},
+    {img:'proiecte/Messenger_creation_938F0997.jpeg', label:'Apartament open-plan'},
+    {img:'proiecte/FB_IMG_1784873865135.jpg', label:'Cuier cu oglindă'},
+    {img:'proiecte/FB_IMG_1784873992595.jpg', label:'Pat dublu tăblie tapițată'},
+    {img:'proiecte/FB_IMG_1784874009047.jpg', label:'Set dormitor complet'},
+    {img:'proiecte/FB_IMG_1784874070311.jpg', label:'Cameră copii'},
+    {img:'proiecte/FB_IMG_1784874196406.jpg', label:'Walk-in closet'},
+    {img:'proiecte/FB_IMG_1784874105840.jpg', label:'Perete TV entertainment'},
+    {img:'proiecte/FB_IMG_1784874178645.jpg', label:'Masă de machiaj'},
+    {img:'proiecte/FB_IMG_1784874141573.jpg', label:'Bucătărie U modernă'},
+    {img:'proiecte/FB_IMG_1784874204751.jpg', label:'Bucătărie premium bicolor'},
+    {img:'proiecte/FB_IMG_1784873921794.jpg', label:'Birou cu rafturi'},
+    {img:'proiecte/FB_IMG_1784874295289.jpg', label:'Cuier + banchetă'}
+  ];
+
+  var current = 0;
+  var viewport = document.getElementById('carouselViewport');
+
+  function renderCarousel(){
+    viewport.innerHTML = '';
+    var total = slides.length;
+    [-2,-1,0,1,2].forEach(function(offset){
+      var idx = (current + offset + total) % total;
+      var div = document.createElement('div');
+      div.className = 'carousel-slide ' + (offset === 0 ? 'active' : 'side');
+      div.innerHTML = '<img src="'+slides[idx].img+'" alt="'+slides[idx].label+'">' +
+                      '<div class="slide-label">'+slides[idx].label+'</div>';
+      viewport.appendChild(div);
+    });
+  }
+
+  document.getElementById('nextBtn').addEventListener('click', function(){
+    current = (current + 1) % slides.length;
+    renderCarousel();
+  });
+  document.getElementById('prevBtn').addEventListener('click', function(){
+    current = (current - 1 + slides.length) % slides.length;
+    renderCarousel();
+  });
+  renderCarousel();
+
+  // LIGHTBOX
+  var galleries = {
+    'buc-complete': {title:'Bucătării complete', imgs:['FB_IMG_1784874311195.jpg','FB_IMG_1784874397894.jpg','FB_IMG_1784874406472.jpg','FB_IMG_1784874462357.jpg','FB_IMG_1784874465458.jpg','FB_IMG_1784874472839.jpg','FB_IMG_1784874490838.jpg','FB_IMG_1784874496460.jpg','FB_IMG_1784874501570.jpg','FB_IMG_1784874514592.jpg','FB_IMG_1784874588921.jpg','FB_IMG_1784873883946.jpg','FB_IMG_1784873887713.jpg','FB_IMG_1784873903224.jpg','FB_IMG_1784874035316.jpg','FB_IMG_1784874045224.jpg','FB_IMG_1784874048086.jpg','FB_IMG_1784874061792.jpg','FB_IMG_1784874113164.jpg','FB_IMG_1784874118100.jpg','FB_IMG_1784874135592.jpg','FB_IMG_1784874141573.jpg','FB_IMG_1784874186547.jpg','FB_IMG_1784874204751.jpg','FB_IMG_1784874318502.jpg']},
+    'buc-insula': {title:'Bucătării cu insulă / bar', imgs:['FB_IMG_1784874564327.jpg','FB_IMG_1784874170677.jpg','FB_IMG_1784874341399.jpg']},
+    'buc-detalii': {title:'Detalii / Corpuri bucătărie', imgs:['FB_IMG_1784874391800.jpg','FB_IMG_1784874418616.jpg','FB_IMG_1784874522446.jpg','FB_IMG_1784873899315.jpg','FB_IMG_1784873905273.jpg','FB_IMG_1784873929521.jpg','FB_IMG_1784873971810.jpg','FB_IMG_1784874241736.jpg','FB_IMG_1784874244764.jpg','FB_IMG_1784874264014.jpg','FB_IMG_1784874349499.jpg']},
+    'dorm-paturi': {title:'Paturi', imgs:['FB_IMG_1784874551893.jpg','FB_IMG_1784873834227.jpg','FB_IMG_1784873938055.jpg','FB_IMG_1784873958233.jpg','FB_IMG_1784873992595.jpg','FB_IMG_1784874000961.jpg','FB_IMG_1784874005194.jpg','FB_IMG_1784874076085.jpg','FB_IMG_1784874272949.jpg','FB_IMG_1784874279223.jpg','FB_IMG_1784874286224.jpg']},
+    'dorm-dulapuri': {title:'Dulapuri', imgs:['FB_IMG_1784873841575.jpg','FB_IMG_1784873894885.jpg','FB_IMG_1784873918844.jpg','FB_IMG_1784873933404.jpg','FB_IMG_1784873942138.jpg','FB_IMG_1784873966056.jpg','FB_IMG_1784873979739.jpg','FB_IMG_1784874009047.jpg','FB_IMG_1784874014730.jpg','FB_IMG_1784874023684.jpg','FB_IMG_1784874161857.jpg','FB_IMG_1784874228879.jpg','FB_IMG_1784874239568.jpg']},
+    'dorm-machiaj': {title:'Masă de machiaj', imgs:['FB_IMG_1784873946251.jpg','FB_IMG_1784873955312.jpg','FB_IMG_1784873962841.jpg','FB_IMG_1784874178645.jpg']},
+    'dorm-noptiere': {title:'Noptiere', imgs:['FB_IMG_1784873845170.jpg','FB_IMG_1784873935738.jpg','FB_IMG_1784874237030.jpg']},
+    'dorm-comode': {title:'Comode', imgs:['FB_IMG_1784873996459.jpg','FB_IMG_1784874149533.jpg']},
+    'dorm-dressing': {title:'Dressing / Walk-in', imgs:['FB_IMG_1784873981827.jpg','FB_IMG_1784873985599.jpg','FB_IMG_1784873987758.jpg','FB_IMG_1784873989785.jpg']},
+    'liv-tv': {title:'Mobilier TV', imgs:['FB_IMG_1784874492855.jpg','FB_IMG_1784874534775.jpg','FB_IMG_1784873977320.jpg','FB_IMG_1784874105840.jpg','FB_IMG_1784874163763.jpg','FB_IMG_1784874325646.jpg']},
+    'liv-biblioteci': {title:'Biblioteci / Etajere', imgs:['FB_IMG_1784874506922.jpg','FB_IMG_1784874425926.jpg','FB_IMG_1784873942138.jpg']},
+    'liv-open': {title:'Open-plan', imgs:['Messenger_creation_938F0997.jpeg','Messenger_creation_50947979.jpeg']},
+    'hol-cuiere': {title:'Cuiere', imgs:['FB_IMG_1784874295289.jpg','FB_IMG_1784874373078.jpg','FB_IMG_1784874378778.jpg','FB_IMG_1784873865135.jpg','FB_IMG_1784873914460.jpg']},
+    'hol-bancheta': {title:'Banchetă + dulap', imgs:['FB_IMG_1784874053491.jpg','FB_IMG_1784874223085.jpg']},
+    'birou-all': {title:'Birouri', imgs:['FB_IMG_1784873921794.jpg','FB_IMG_1784873924327.jpg','FB_IMG_1784873952184.jpg','FB_IMG_1784874091667.jpg','FB_IMG_1784874303542.jpg','FB_IMG_1784874385390.jpg','FB_IMG_1784874548588.jpg','FB_IMG_1784873848359.jpg']},
+    'copii-all': {title:'Cameră Copii', imgs:['FB_IMG_1784874070311.jpg','FB_IMG_1784874073158.jpg']},
+    'baie-all': {title:'Mobilier Baie', imgs:['FB_IMG_1784873974261.jpg']}
+  };
+
+  var lbCurrent = 0;
+  var lbImages = [];
+  var lbTitle = '';
+
+  function renderLightbox(){
+    document.getElementById('lbImage').src = 'proiecte/' + lbImages[lbCurrent];
+    document.getElementById('lbTitle').textContent = lbTitle;
+    document.getElementById('lbCounter').textContent = (lbCurrent + 1) + ' / ' + lbImages.length;
+    var thumbs = document.getElementById('lbThumbs').children;
+    for(var i = 0; i < thumbs.length; i++){
+      thumbs[i].className = (i === lbCurrent) ? 'active' : '';
+    }
+    // Scroll active thumb into view
+    if(thumbs[lbCurrent]){
+      thumbs[lbCurrent].scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
+    }
+  }
+
+  window.openLightbox = function(key){
+    var data = galleries[key];
+    if(!data) return;
+    lbImages = data.imgs;
+    lbTitle = data.title;
+    lbCurrent = 0;
+    var thumbsHtml = '';
+    lbImages.forEach(function(img, i){
+      thumbsHtml += '<img src="proiecte/'+img+'" onclick="goToSlide('+i+')" alt="">';
+    });
+    document.getElementById('lbThumbs').innerHTML = thumbsHtml;
+    renderLightbox();
+    document.getElementById('lightbox').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  };
+
+  window.closeLightbox = function(){
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  };
+
+  window.goToSlide = function(i){
+    lbCurrent = i;
+    renderLightbox();
+  };
+
+  document.getElementById('lbNext').addEventListener('click', function(){
+    lbCurrent = (lbCurrent + 1) % lbImages.length;
+    renderLightbox();
+  });
+  document.getElementById('lbPrev').addEventListener('click', function(){
+    lbCurrent = (lbCurrent - 1 + lbImages.length) % lbImages.length;
+    renderLightbox();
+  });
+
+  document.getElementById('lightbox').addEventListener('click', function(e){
+    if(e.target === this) closeLightbox();
+  });
+
+  // Touch swipe for lightbox
+  var touchStartX = 0;
+  var touchEndX = 0;
+  document.getElementById('lightbox').addEventListener('touchstart', function(e){
+    touchStartX = e.changedTouches[0].screenX;
+  }, {passive:true});
+  document.getElementById('lightbox').addEventListener('touchend', function(e){
+    touchEndX = e.changedTouches[0].screenX;
+    var diff = touchStartX - touchEndX;
+    if(Math.abs(diff) > 50){
+      if(diff > 0){lbCurrent = (lbCurrent + 1) % lbImages.length;}
+      else{lbCurrent = (lbCurrent - 1 + lbImages.length) % lbImages.length;}
+      renderLightbox();
+    }
+  }, {passive:true});
+
+  document.addEventListener('keydown', function(e){
+    if(!document.getElementById('lightbox').classList.contains('open')) return;
+    if(e.key === 'ArrowRight'){lbCurrent = (lbCurrent + 1) % lbImages.length; renderLightbox();}
+    if(e.key === 'ArrowLeft'){lbCurrent = (lbCurrent - 1 + lbImages.length) % lbImages.length; renderLightbox();}
+    if(e.key === 'Escape') closeLightbox();
+  });
+})();
+</script>
+
+</body>
+</html>
+
