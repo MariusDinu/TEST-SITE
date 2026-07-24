@@ -613,8 +613,10 @@ input[type="radio"][name="page"]{display:none}
   var carouselCurrent = 0;
   var viewport = document.getElementById('carouselViewport');
 
- function initCarousel() {
+function initCarousel() {
     carouselSlides = [];
+
+    console.log(galleries["carusel"]);
 
     if (galleries["carusel"]) {
         galleries["carusel"].forEach(function(img) {
@@ -624,6 +626,8 @@ input[type="radio"][name="page"]{display:none}
             });
         });
     }
+
+    console.log(carouselSlides);
 
     if (carouselSlides.length > 0) {
         renderCarousel();
