@@ -1,45 +1,61 @@
+[altele]
+proiecte/altele/FB_IMG_1784874542896.jpg
+proiecte/altele/FB_IMG_1784908366843.jpg
+
 [baie]
 proiecte/baie/FB_IMG_1784873974261.jpg
+proiecte/baie/FB_IMG_1784908292834.jpg
+proiecte/baie/FB_IMG_1784908294932.jpg
+proiecte/baie/FB_IMG_1784908297096.jpg
 
 [birou]
 
 [birou/adulti]
-proiecte/birou/adulti/FB_IMG_1784873848359.jpg
 proiecte/birou/adulti/FB_IMG_1784873921794.jpg
 proiecte/birou/adulti/FB_IMG_1784873924327.jpg
 proiecte/birou/adulti/FB_IMG_1784873952184.jpg
 proiecte/birou/adulti/FB_IMG_1784874091667.jpg
-proiecte/birou/adulti/FB_IMG_1784874303542.jpg
 proiecte/birou/adulti/FB_IMG_1784874385390.jpg
 proiecte/birou/adulti/FB_IMG_1784874548588.jpg
+proiecte/birou/adulti/FB_IMG_1784908741797.jpg
+proiecte/birou/adulti/FB_IMG_9784873848359.jpg
+proiecte/birou/adulti/IMG-20260724-WA0007.jpg
 
 [birou/copii]
 proiecte/birou/copii/FB_IMG_1784874070311.jpg
 proiecte/birou/copii/FB_IMG_1784874073158.jpg
 proiecte/birou/copii/FB_IMG_1784874454088.jpg
+proiecte/birou/copii/FB_IMG_1784908406083.jpg
+proiecte/birou/copii/IMG-20260724-WA0006.jpg
+proiecte/birou/copii/IMG-20260724-WA0009.jpg
+proiecte/birou/copii/IMG-20260724-WA0010.jpg
 
 [bucatarie]
-proiecte/bucatarie/FB_IMG_1784874057375.jpg
-proiecte/bucatarie/FB_IMG_1784874311195.jpg
 
 [bucatarie/complete]
 proiecte/bucatarie/complete/FB_IMG_1784873883946.jpg
 proiecte/bucatarie/complete/FB_IMG_1784873887713.jpg
 proiecte/bucatarie/complete/FB_IMG_1784873903224.jpg
+proiecte/bucatarie/complete/FB_IMG_1784873971810.jpg
 proiecte/bucatarie/complete/FB_IMG_1784874035316.jpg
 proiecte/bucatarie/complete/FB_IMG_1784874045224.jpg
 proiecte/bucatarie/complete/FB_IMG_1784874048086.jpg
 proiecte/bucatarie/complete/FB_IMG_1784874061792.jpg
 proiecte/bucatarie/complete/FB_IMG_1784874113164.jpg
-proiecte/bucatarie/complete/FB_IMG_1784874118100.jpg
 proiecte/bucatarie/complete/FB_IMG_1784874135592.jpg
 proiecte/bucatarie/complete/FB_IMG_1784874141573.jpg
 proiecte/bucatarie/complete/FB_IMG_1784874186547.jpg
 proiecte/bucatarie/complete/FB_IMG_1784874204751.jpg
+proiecte/bucatarie/complete/FB_IMG_1784874241736.jpg
+proiecte/bucatarie/complete/FB_IMG_1784874244764.jpg
+proiecte/bucatarie/complete/FB_IMG_1784874264014.jpg
 proiecte/bucatarie/complete/FB_IMG_1784874311195.jpg
 proiecte/bucatarie/complete/FB_IMG_1784874318502.jpg
+proiecte/bucatarie/complete/FB_IMG_1784874349499.jpg
+proiecte/bucatarie/complete/FB_IMG_1784874391800.jpg
 proiecte/bucatarie/complete/FB_IMG_1784874397894.jpg
 proiecte/bucatarie/complete/FB_IMG_1784874406472.jpg
+proiecte/bucatarie/complete/FB_IMG_1784874418616.jpg
 proiecte/bucatarie/complete/FB_IMG_1784874462357.jpg
 proiecte/bucatarie/complete/FB_IMG_1784874465458.jpg
 proiecte/bucatarie/complete/FB_IMG_1784874472839.jpg
@@ -47,25 +63,32 @@ proiecte/bucatarie/complete/FB_IMG_1784874490838.jpg
 proiecte/bucatarie/complete/FB_IMG_1784874496460.jpg
 proiecte/bucatarie/complete/FB_IMG_1784874501570.jpg
 proiecte/bucatarie/complete/FB_IMG_1784874514592.jpg
+proiecte/bucatarie/complete/FB_IMG_1784874522446.jpg
 proiecte/bucatarie/complete/FB_IMG_1784874588921.jpg
+proiecte/bucatarie/complete/FB_IMG_1784908184432.jpg
+proiecte/bucatarie/complete/FB_IMG_1784908348880.jpg
+proiecte/bucatarie/complete/FB_IMG_1784908388273.jpg
+proiecte/bucatarie/complete/FB_IMG_1784908472418.jpg
+proiecte/bucatarie/complete/FB_IMG_1784908870120.jpg
 
 [bucatarie/detalii]
 proiecte/bucatarie/detalii/FB_IMG_1784873899315.jpg
 proiecte/bucatarie/detalii/FB_IMG_1784873905273.jpg
 proiecte/bucatarie/detalii/FB_IMG_1784873929521.jpg
-proiecte/bucatarie/detalii/FB_IMG_1784873971810.jpg
-proiecte/bucatarie/detalii/FB_IMG_1784874241736.jpg
-proiecte/bucatarie/detalii/FB_IMG_1784874244764.jpg
-proiecte/bucatarie/detalii/FB_IMG_1784874264014.jpg
-proiecte/bucatarie/detalii/FB_IMG_1784874349499.jpg
-proiecte/bucatarie/detalii/FB_IMG_1784874391800.jpg
-proiecte/bucatarie/detalii/FB_IMG_1784874418616.jpg
-proiecte/bucatarie/detalii/FB_IMG_1784874522446.jpg
+proiecte/bucatarie/detalii/FB_IMG_1784874057375.jpg
 
 [bucatarie/insula]
 proiecte/bucatarie/insula/FB_IMG_1784874170677.jpg
 proiecte/bucatarie/insula/FB_IMG_1784874341399.jpg
 proiecte/bucatarie/insula/FB_IMG_1784874564327.jpg
+
+[bucatarie/mese_scaune]
+proiecte/bucatarie/mese_scaune/1.jpg
+proiecte/bucatarie/mese_scaune/2.jpg
+proiecte/bucatarie/mese_scaune/3 (1).jpg
+proiecte/bucatarie/mese_scaune/3 (2).jpg
+proiecte/bucatarie/mese_scaune/3 (3).jpg
+proiecte/bucatarie/mese_scaune/3 (4).jpg
 
 [dormitor]
 
@@ -73,35 +96,54 @@ proiecte/bucatarie/insula/FB_IMG_1784874564327.jpg
 
 [dormitor/adulti/comode]
 proiecte/dormitor/adulti/comode/FB_IMG_1784874149533.jpg
+proiecte/dormitor/adulti/comode/FB_IMG_1784908250459.jpg
 
 [dormitor/adulti/dressing]
+proiecte/dormitor/adulti/dressing/FB_IMG_1784873894885.jpg
+proiecte/dormitor/adulti/dressing/FB_IMG_1784873918844.jpg
+proiecte/dormitor/adulti/dressing/FB_IMG_1784873933404.jpg
+proiecte/dormitor/adulti/dressing/FB_IMG_1784873966056.jpg
+proiecte/dormitor/adulti/dressing/FB_IMG_1784873979739.jpg
 proiecte/dormitor/adulti/dressing/FB_IMG_1784873985599.jpg
 proiecte/dormitor/adulti/dressing/FB_IMG_1784873987758.jpg
 proiecte/dormitor/adulti/dressing/FB_IMG_1784873989785.jpg
+proiecte/dormitor/adulti/dressing/FB_IMG_1784874009047.jpg
+proiecte/dormitor/adulti/dressing/FB_IMG_1784874014730.jpg
+proiecte/dormitor/adulti/dressing/FB_IMG_1784874023684.jpg
 proiecte/dormitor/adulti/dressing/FB_IMG_1784874100738.jpg
+proiecte/dormitor/adulti/dressing/FB_IMG_1784874161857.jpg
 proiecte/dormitor/adulti/dressing/FB_IMG_1784874196406.jpg
+proiecte/dormitor/adulti/dressing/FB_IMG_1784874228879.jpg
+proiecte/dormitor/adulti/dressing/FB_IMG_1784874239568.jpg
+proiecte/dormitor/adulti/dressing/FB_IMG_1784908303108.jpg
+proiecte/dormitor/adulti/dressing/FB_IMG_1784908305761.jpg
+proiecte/dormitor/adulti/dressing/FB_IMG_1784908394522.jpg
+proiecte/dormitor/adulti/dressing/FB_IMG_1784908403323.jpg
+proiecte/dormitor/adulti/dressing/FB_IMG_1784908412283.jpg
+proiecte/dormitor/adulti/dressing/FB_IMG_1784908445879.jpg
+proiecte/dormitor/adulti/dressing/FB_IMG_1784908450131.jpg
+proiecte/dormitor/adulti/dressing/FB_IMG_1784908466198.jpg
+proiecte/dormitor/adulti/dressing/FB_IMG_1784908771187.jpg
+proiecte/dormitor/adulti/dressing/FB_IMG_1784908906756.jpg
+proiecte/dormitor/adulti/dressing/FB_IMG_1784908908936.jpg
+proiecte/dormitor/adulti/dressing/FB_IMG_1784908911411.jpg
+proiecte/dormitor/adulti/dressing/FB_IMG_1784908916514.jpg
+proiecte/dormitor/adulti/dressing/IMG-20260724-WA0004.jpg
+proiecte/dormitor/adulti/dressing/IMG-20260724-WA0005.jpg
 
 [dormitor/adulti/dulapuri]
-proiecte/dormitor/adulti/dulapuri/FB_IMG_1784873894885.jpg
-proiecte/dormitor/adulti/dulapuri/FB_IMG_1784873918844.jpg
-proiecte/dormitor/adulti/dulapuri/FB_IMG_1784873933404.jpg
-proiecte/dormitor/adulti/dulapuri/FB_IMG_1784873966056.jpg
-proiecte/dormitor/adulti/dulapuri/FB_IMG_1784873979739.jpg
-proiecte/dormitor/adulti/dulapuri/FB_IMG_1784874009047.jpg
-proiecte/dormitor/adulti/dulapuri/FB_IMG_1784874014730.jpg
-proiecte/dormitor/adulti/dulapuri/FB_IMG_1784874023684.jpg
-proiecte/dormitor/adulti/dulapuri/FB_IMG_1784874161857.jpg
-proiecte/dormitor/adulti/dulapuri/FB_IMG_1784874228879.jpg
-proiecte/dormitor/adulti/dulapuri/FB_IMG_1784874239568.jpg
 
 [dormitor/adulti/machiaj]
 proiecte/dormitor/adulti/machiaj/FB_IMG_1784873955312.jpg
 proiecte/dormitor/adulti/machiaj/FB_IMG_1784873962841.jpg
-proiecte/dormitor/adulti/machiaj/FB_IMG_1784874178645.jpg
 
 [dormitor/adulti/noptiere]
 proiecte/dormitor/adulti/noptiere/FB_IMG_1784873935738.jpg
 proiecte/dormitor/adulti/noptiere/FB_IMG_1784874237030.jpg
+proiecte/dormitor/adulti/noptiere/FB_IMG_1784908242675.jpg
+proiecte/dormitor/adulti/noptiere/FB_IMG_1784908244924.jpg
+proiecte/dormitor/adulti/noptiere/FB_IMG_1784908363636.jpg
+proiecte/dormitor/adulti/noptiere/IMG-20260724-WA0008.jpg
 
 [dormitor/adulti/paturi]
 proiecte/dormitor/adulti/paturi/FB_IMG_1784873834227.jpg
@@ -115,28 +157,39 @@ proiecte/dormitor/adulti/paturi/FB_IMG_1784874076085.jpg
 proiecte/dormitor/adulti/paturi/FB_IMG_1784874272949.jpg
 proiecte/dormitor/adulti/paturi/FB_IMG_1784874279223.jpg
 proiecte/dormitor/adulti/paturi/FB_IMG_1784874286224.jpg
+proiecte/dormitor/adulti/paturi/FB_IMG_1784908201775.jpg
+proiecte/dormitor/adulti/paturi/FB_IMG_1784908206212.jpg
+proiecte/dormitor/adulti/paturi/FB_IMG_1784908247799.jpg
 
 [dormitor/copii]
 
 [dormitor/copii/comode]
 
 [dormitor/copii/dressing]
+proiecte/dormitor/copii/dressing/FB_IMG_1784874070311.jpg
+proiecte/dormitor/copii/dressing/FB_IMG_1784874073158.jpg
 proiecte/dormitor/copii/dressing/FB_IMG_1784874454088.jpg
+proiecte/dormitor/copii/dressing/IMG-20260724-WA0012.jpg
+proiecte/dormitor/copii/dressing/IMG-20260724-WA0013.jpg
 
 [dormitor/copii/dulapuri]
-proiecte/dormitor/copii/dulapuri/FB_IMG_1784874070311.jpg
-proiecte/dormitor/copii/dulapuri/FB_IMG_1784874073158.jpg
 
 [dormitor/copii/noptiere]
 
 [dormitor/copii/paturi]
 
 [hol]
-proiecte/hol/FB_IMG_1784874210943.jpg
 
 [hol/bancheta]
 proiecte/hol/bancheta/FB_IMG_1784874053491.jpg
+proiecte/hol/bancheta/FB_IMG_1784874210943.jpg
 proiecte/hol/bancheta/FB_IMG_1784874223085.jpg
+proiecte/hol/bancheta/FB_IMG_1784908344774.jpg
+proiecte/hol/bancheta/FB_IMG_1784908396454.jpg
+proiecte/hol/bancheta/FB_IMG_1784908400037.jpg
+proiecte/hol/bancheta/FB_IMG_1784908461878.jpg
+proiecte/hol/bancheta/FB_IMG_1784908727352.jpg
+proiecte/hol/bancheta/FB_IMG_1784908737457.jpg
 
 [hol/cuiere]
 proiecte/hol/cuiere/FB_IMG_1784873865135.jpg
@@ -144,6 +197,9 @@ proiecte/hol/cuiere/FB_IMG_1784873914460.jpg
 proiecte/hol/cuiere/FB_IMG_1784874295289.jpg
 proiecte/hol/cuiere/FB_IMG_1784874373078.jpg
 proiecte/hol/cuiere/FB_IMG_1784874378778.jpg
+proiecte/hol/cuiere/FB_IMG_1784908213368.jpg
+proiecte/hol/cuiere/FB_IMG_1784908216092.jpg
+proiecte/hol/cuiere/FB_IMG_1784908273829.jpg
 
 [living]
 
@@ -160,7 +216,13 @@ proiecte/living/open/Messenger_creation_938F0997.jpeg
 proiecte/living/tv/FB_IMG_1784873977320.jpg
 proiecte/living/tv/FB_IMG_1784874105840.jpg
 proiecte/living/tv/FB_IMG_1784874163763.jpg
+proiecte/living/tv/FB_IMG_1784874178645.jpg
 proiecte/living/tv/FB_IMG_1784874325646.jpg
 proiecte/living/tv/FB_IMG_1784874492855.jpg
 proiecte/living/tv/FB_IMG_1784874534775.jpg
+proiecte/living/tv/FB_IMG_1784908337554.jpg
+proiecte/living/tv/FB_IMG_1784908351686.jpg
+proiecte/living/tv/FB_IMG_1784908357308.jpg
+proiecte/living/tv/FB_IMG_1784908798408.jpg
+proiecte/living/tv/FB_IMG_1784908806260.jpg
 
