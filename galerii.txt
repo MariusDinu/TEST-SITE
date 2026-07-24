@@ -90,6 +90,30 @@ proiecte/bucatarie/mese_scaune/3 (2).jpg
 proiecte/bucatarie/mese_scaune/3 (3).jpg
 proiecte/bucatarie/mese_scaune/3 (4).jpg
 
+[carusel]
+proiecte/carusel/FB_IMG_1784873894885.jpg
+proiecte/carusel/FB_IMG_1784873952184.jpg
+proiecte/carusel/FB_IMG_1784873966056.jpg
+proiecte/carusel/FB_IMG_1784874035316.jpg
+proiecte/carusel/FB_IMG_1784874045224.jpg
+proiecte/carusel/FB_IMG_1784874161857.jpg
+proiecte/carusel/FB_IMG_1784874178645.jpg
+proiecte/carusel/FB_IMG_1784874295289.jpg
+proiecte/carusel/FB_IMG_1784874349499.jpg
+proiecte/carusel/FB_IMG_1784874385390.jpg
+proiecte/carusel/FB_IMG_1784874588921.jpg
+proiecte/carusel/FB_IMG_1784908216092.jpg
+proiecte/carusel/FB_IMG_1784908273829.jpg
+proiecte/carusel/FB_IMG_1784908303108.jpg
+proiecte/carusel/FB_IMG_1784908337554.jpg
+proiecte/carusel/FB_IMG_1784908357308.jpg
+proiecte/carusel/FB_IMG_1784908388273.jpg
+proiecte/carusel/FB_IMG_1784908741797.jpg
+proiecte/carusel/FB_IMG_1784908798408.jpg
+proiecte/carusel/FB_IMG_1784908870120.jpg
+proiecte/carusel/IMG-20260724-WA0004.jpg
+proiecte/carusel/IMG-20260724-WA0007.jpg
+
 [dormitor]
 
 [dormitor/adulti]

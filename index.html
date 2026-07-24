@@ -613,33 +613,22 @@ input[type="radio"][name="page"]{display:none}
   var carouselCurrent = 0;
   var viewport = document.getElementById('carouselViewport');
 
-  function initCarousel(){
-    var labels = {
-      'bucatarie/complete': 'Bucatarie completa',
-      'bucatarie/insula': 'Bucatarie cu insula',
-      'bucatarie/detalii': 'Detalii bucatarie',
-      'dormitor/adulti/paturi': 'Pat dublu tapitat',
-      'dormitor/adulti/dulapuri': 'Dulap dormitor',
-      'dormitor/adulti/dressing': 'Walk-in closet',
-      'dormitor/adulti/machiaj': 'Masa de machiaj',
-      'dormitor/copii': 'Dormitor copii',
-      'living/tv': 'Mobilier TV',
-      'living/biblioteci': 'Biblioteca',
-      'living/open': 'Open-plan',
-      'hol/cuiere': 'Cuier cu oglinda',
-      'hol/bancheta': 'Bancheta + dulap',
-      'birou/adulti': 'Birou home office',
-      'baie': 'Mobilier baie'
-    };
-    var keys = Object.keys(labels);
-    for(var i = 0; i < keys.length; i++){
-      var key = keys[i];
-      if(galleries[key] && galleries[key].length > 0){
-        carouselSlides.push({img: galleries[key][0], label: labels[key]});
-      }
+ function initCarousel() {
+    carouselSlides = [];
+
+    if (galleries["carusel"]) {
+        galleries["carusel"].forEach(function(img) {
+            carouselSlides.push({
+                img: img,
+                label: "V&A Mobilier la Comandă"
+            });
+        });
     }
-    if(carouselSlides.length > 0) renderCarousel();
-  }
+
+    if (carouselSlides.length > 0) {
+        renderCarousel();
+    }
+}
 
   function renderCarousel(){
     viewport.innerHTML = '';
