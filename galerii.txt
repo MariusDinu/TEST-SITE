@@ -92,6 +92,7 @@ proiecte/dormitor/adulti/dressing/FB_IMG_1784873981827.jpg
 proiecte/dormitor/adulti/dressing/FB_IMG_1784873985599.jpg
 proiecte/dormitor/adulti/dressing/FB_IMG_1784873987758.jpg
 proiecte/dormitor/adulti/dressing/FB_IMG_1784873989785.jpg
+proiecte/dormitor/adulti/dressing/FB_IMG_1784874100738.jpg
 
 [dormitor/copii]
 proiecte/dormitor/copii/FB_IMG_1784874070311.jpg
