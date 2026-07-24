@@ -28,7 +28,6 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-
 
 input[type="radio"][name="page"]{display:none}
 
-/* NAV */
 .nav{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,0.97);backdrop-filter:blur(10px);padding:0 60px;display:flex;align-items:center;justify-content:space-between;height:76px;border-bottom:1px solid var(--border)}
 .logo{display:flex;align-items:center;gap:12px;flex-shrink:0}
 .logo-icon{width:40px;height:40px;background:var(--accent);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:14px;font-family:'Playfair Display',serif;flex-shrink:0}
@@ -42,7 +41,6 @@ input[type="radio"][name="page"]{display:none}
 #page-proiecte:checked~.nav .nav-links label[for="page-proiecte"],
 #page-contact:checked~.nav .nav-links label[for="page-contact"]{color:var(--accent);border-bottom-color:var(--accent)}
 
-/* HAMBURGER */
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:10px;z-index:1001}
 .hamburger span{display:block;width:24px;height:2px;background:var(--primary);transition:all .3s}
 .mobile-menu{display:none}
@@ -118,7 +116,6 @@ input[type="radio"][name="page"]{display:none}
 .subcat-card span{font-size:13px;color:var(--text);font-weight:600;line-height:1.4;display:block}
 .subcat-card small{font-size:11px;color:var(--text-muted);margin-top:4px;display:block}
 
-/* LIGHTBOX */
 .lightbox{display:none;position:fixed;inset:0;background:rgba(10,8,6,.92);z-index:9999;flex-direction:column;align-items:center;justify-content:center;backdrop-filter:blur(6px)}
 .lightbox.open{display:flex}
 .lightbox-header{position:absolute;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:20px 30px;z-index:10}
@@ -136,7 +133,6 @@ input[type="radio"][name="page"]{display:none}
 .lightbox-thumbs img:hover{opacity:.7}
 .lightbox-thumbs img.active{opacity:1;border-color:var(--accent)}
 
-/* CONTACT */
 .contact-section{background:var(--bg-section);padding:100px 60px}
 .contact-inner{max-width:1100px;margin:0 auto}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;margin-top:50px}
@@ -157,7 +153,6 @@ input[type="radio"][name="page"]{display:none}
 
 .footer{background:var(--white);border-top:1px solid var(--border);padding:30px 60px;text-align:center;font-size:13px;color:var(--text-muted)}
 
-/* ===== RESPONSIVE MOBILE ===== */
 @media(max-width:768px){
   .nav{padding:0 16px;height:60px}
   .logo-icon{width:34px;height:34px;font-size:12px}
@@ -166,50 +161,25 @@ input[type="radio"][name="page"]{display:none}
   .logo{gap:8px}
   .nav-links{display:none}
   .hamburger{display:flex}
-  
-  .mobile-menu{
-    display:none;
-    position:fixed;
-    top:60px;
-    left:0;
-    right:0;
-    background:var(--white);
-    border-bottom:1px solid var(--border);
-    z-index:999;
-    padding:10px 0;
-    box-shadow:0 10px 30px rgba(0,0,0,.08)
-  }
+  .mobile-menu{display:none;position:fixed;top:60px;left:0;right:0;background:var(--white);border-bottom:1px solid var(--border);z-index:999;padding:10px 0;box-shadow:0 10px 30px rgba(0,0,0,.08)}
   .mobile-menu.open{display:block}
-  .mobile-menu label{
-    display:block;
-    padding:14px 24px;
-    font-size:14px;
-    font-weight:500;
-    color:var(--text);
-    cursor:pointer;
-    transition:background .2s
-  }
+  .mobile-menu label{display:block;padding:14px 24px;font-size:14px;font-weight:500;color:var(--text);cursor:pointer;transition:background .2s}
   .mobile-menu label:hover{background:var(--bg-section)}
-
   .hero{min-height:70vh;padding:40px 20px}
   .hero h1{font-size:30px}
   .hero-badge{font-size:10px;padding:6px 14px;letter-spacing:1.5px}
   .hero p{font-size:15px;margin-bottom:30px}
   .btn{padding:14px 28px;font-size:12px}
-
   .features-section{padding:60px 20px}
   .features-grid{grid-template-columns:1fr;gap:20px}
   .feature-card{padding:24px 20px}
   .section-title{font-size:26px}
-
   .about-section{padding:60px 20px}
   .about-grid{grid-template-columns:1fr;gap:30px}
   .about-content h2{font-size:26px}
   .values-grid{grid-template-columns:1fr}
-
   .video-section{padding:40px 16px}
   .video-section h2{font-size:22px}
-
   .carousel-wrap{padding:40px 16px}
   .carousel-wrap h3{font-size:20px}
   .carousel-container{height:220px;gap:8px}
@@ -217,7 +187,6 @@ input[type="radio"][name="page"]{display:none}
   .carousel-slide.active{width:200px;height:180px}
   .carousel-slide.side{width:100px;height:120px}
   .carousel-slide .slide-label{font-size:10px;padding:20px 8px 8px}
-
   .gallery-section{padding:40px 16px}
   .section-header{margin-bottom:40px}
   .subcategory-grid{grid-template-columns:repeat(2,1fr);gap:10px}
@@ -225,7 +194,6 @@ input[type="radio"][name="page"]{display:none}
   .subcat-card span{font-size:12px}
   .category-block h3{font-size:18px}
   .subcategory-title{font-size:16px}
-
   .lightbox-header{padding:12px 16px}
   .lightbox-title{font-size:14px}
   .lightbox-counter{font-size:11px}
@@ -235,15 +203,12 @@ input[type="radio"][name="page"]{display:none}
   .lightbox-img-wrap img{max-height:55vh}
   .lightbox-thumbs{padding:10px 12px;gap:6px}
   .lightbox-thumbs img{width:44px;height:34px}
-
   .contact-section{padding:60px 20px}
   .contact-grid{grid-template-columns:1fr;gap:30px}
   .map-container{min-height:280px}
   .whatsapp-block{padding:24px}
-
   .footer{padding:20px 16px;font-size:12px}
 }
-
 @media(max-width:400px){
   .hero h1{font-size:26px}
   .carousel-slide.active{width:170px;height:150px}
@@ -560,7 +525,6 @@ input[type="radio"][name="page"]{display:none}
 
 <script>
 (function(){
-  // MOBILE MENU
   window.toggleMenu = function(){
     document.getElementById('mobileMenu').classList.toggle('open');
   };
@@ -568,18 +532,14 @@ input[type="radio"][name="page"]{display:none}
     document.getElementById('mobileMenu').classList.remove('open');
   };
 
-  // ============================================
-  // PARSARE galerii.txt → obiect intern (tabel)
-  // ============================================
-  var galleries = {}; // { 'bucatarie/complete': ['proiecte/...jpg', ...], ... }
+  var galleries = {};
 
   function parseGalerii(text){
     var lines = text.split('\n');
     var currentKey = null;
     for(var i = 0; i < lines.length; i++){
       var line = lines[i].trim();
-      if(!line) continue; // skip empty lines
-      // Detectează secțiune [categorie/subcategorie]
+      if(!line) continue;
       if(line.charAt(0) === '[' && line.charAt(line.length - 1) === ']'){
         currentKey = line.substring(1, line.length - 1);
         if(!galleries[currentKey]) galleries[currentKey] = [];
@@ -589,7 +549,6 @@ input[type="radio"][name="page"]{display:none}
     }
   }
 
-  // Încarcă galerii.txt la start
   fetch('galerii.txt')
     .then(function(res){ return res.text(); })
     .then(function(text){
@@ -599,15 +558,13 @@ input[type="radio"][name="page"]{display:none}
       initCarousel();
     })
     .catch(function(err){
-      console.error('Nu s-a putut încărca galerii.txt:', err);
+      console.error('Nu s-a putut incarca galerii.txt:', err);
     });
 
-  // ============================================
-  // THUMBNAILS — prima poză din fiecare secțiune ca thumbnail pe card
-  // ============================================
   function initThumbnails(){
     var thumbs = document.querySelectorAll('.thumb[data-folder]');
-    thumbs.forEach(function(el){
+    for(var i = 0; i < thumbs.length; i++){
+      var el = thumbs[i];
       var folder = el.getAttribute('data-folder');
       if(galleries[folder] && galleries[folder].length > 0){
         var img = document.createElement('img');
@@ -615,71 +572,66 @@ input[type="radio"][name="page"]{display:none}
         img.alt = '';
         el.appendChild(img);
       }
-    });
+    }
   }
 
-  // ============================================
-  // PHOTO COUNT — afișează nr. de poze pe fiecare card
-  // ============================================
   function initPhotoCounts(){
     var counters = document.querySelectorAll('.photo-count[data-folder]');
-    counters.forEach(function(el){
+    for(var i = 0; i < counters.length; i++){
+      var el = counters[i];
       var folder = el.getAttribute('data-folder');
       var n = (galleries[folder] && galleries[folder].length) || 0;
-      if(n === 0) el.textContent = 'În curând';
+      if(n === 0) el.textContent = 'In curand';
       else if(n === 1) el.textContent = '1 fotografie';
       else el.textContent = n + ' fotografii';
-    });
+    }
   }
 
-  // ============================================
-  // CAROUSEL — folosește prima poză din fiecare secțiune
-  // ============================================
   var carouselSlides = [];
   var carouselCurrent = 0;
+  var viewport = document.getElementById('carouselViewport');
 
   function initCarousel(){
     var labels = {
-      'bucatarie/complete/': 'Bucătărie completă',
-      'bucatarie/insula': 'Bucătărie cu insulă',
-      'bucatarie/detalii': 'Detalii bucătărie',
-      'dormitor/adulti/paturi': 'Pat dublu tapițat',
+      'bucatarie/complete': 'Bucatarie completa',
+      'bucatarie/insula': 'Bucatarie cu insula',
+      'bucatarie/detalii': 'Detalii bucatarie',
+      'dormitor/adulti/paturi': 'Pat dublu tapitat',
       'dormitor/adulti/dulapuri': 'Dulap dormitor',
       'dormitor/adulti/dressing': 'Walk-in closet',
-      'dormitor/adulti/machiaj': 'Masă de machiaj',
+      'dormitor/adulti/machiaj': 'Masa de machiaj',
       'dormitor/copii': 'Dormitor copii',
       'living/tv': 'Mobilier TV',
-      'living/biblioteci': 'Bibliotecă',
+      'living/biblioteci': 'Biblioteca',
       'living/open': 'Open-plan',
-      'hol/cuiere': 'Cuier cu oglindă',
-      'hol/bancheta': 'Banchetă + dulap',
+      'hol/cuiere': 'Cuier cu oglinda',
+      'hol/bancheta': 'Bancheta + dulap',
       'birou/adulti': 'Birou home office',
       'baie': 'Mobilier baie'
     };
-
-    Object.keys(labels).forEach(function(key){
+    var keys = Object.keys(labels);
+    for(var i = 0; i < keys.length; i++){
+      var key = keys[i];
       if(galleries[key] && galleries[key].length > 0){
         carouselSlides.push({img: galleries[key][0], label: labels[key]});
       }
-    });
-
+    }
     if(carouselSlides.length > 0) renderCarousel();
   }
-
-  var viewport = document.getElementById('carouselViewport');
 
   function renderCarousel(){
     viewport.innerHTML = '';
     var total = carouselSlides.length;
     if(total === 0) return;
-    [-2,-1,0,1,2].forEach(function(offset){
+    var offsets = [-2,-1,0,1,2];
+    for(var o = 0; o < offsets.length; o++){
+      var offset = offsets[o];
       var idx = (carouselCurrent + offset + total) % total;
       var div = document.createElement('div');
       div.className = 'carousel-slide ' + (offset === 0 ? 'active' : 'side');
-      div.innerHTML = '<img src="'+carouselSlides[idx].img+'" alt="'+carouselSlides[idx].label+'">' +
-                      '<div class="slide-label">'+carouselSlides[idx].label+'</div>';
+      div.innerHTML = '<img src="'+carouselSlides[idx].img+'" alt="'+carouselSlides[idx].label+'"><div class="slide-label">'+carouselSlides[idx].label+'</div>';
       viewport.appendChild(div);
-    });
+    }
   }
 
   document.getElementById('nextBtn').addEventListener('click', function(){
@@ -693,9 +645,7 @@ input[type="radio"][name="page"]{display:none}
     renderCarousel();
   });
 
-  // ============================================
-  // LIGHTBOX — citește din tabelul intern
-  // ============================================
+  // LIGHTBOX
   var lbCurrent = 0;
   var lbImages = [];
   var lbTitle = '';
@@ -705,4 +655,77 @@ input[type="radio"][name="page"]{display:none}
     document.getElementById('lbTitle').textContent = lbTitle;
     document.getElementById('lbCounter').textContent = (lbCurrent + 1) + ' / ' + lbImages.length;
     var thumbs = document.getElementById('lbThumbs').children;
-    for(var
+    for(var i = 0; i < thumbs.length; i++){
+      thumbs[i].className = (i === lbCurrent) ? 'active' : '';
+    }
+    if(thumbs[lbCurrent]){
+      thumbs[lbCurrent].scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
+    }
+  }
+
+  window.openLightbox = function(folder, title){
+    if(!galleries[folder] || galleries[folder].length === 0){
+      alert('Nu sunt fotografii in aceasta categorie inca.');
+      return;
+    }
+    lbImages = galleries[folder];
+    lbTitle = title;
+    lbCurrent = 0;
+    var thumbsHtml = '';
+    for(var i = 0; i < lbImages.length; i++){
+      thumbsHtml += '<img src="'+lbImages[i]+'" onclick="goToSlide('+i+')" alt="">';
+    }
+    document.getElementById('lbThumbs').innerHTML = thumbsHtml;
+    renderLightbox();
+    document.getElementById('lightbox').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  };
+
+  window.closeLightbox = function(){
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  };
+
+  window.goToSlide = function(i){
+    lbCurrent = i;
+    renderLightbox();
+  };
+
+  document.getElementById('lbNext').addEventListener('click', function(){
+    lbCurrent = (lbCurrent + 1) % lbImages.length;
+    renderLightbox();
+  });
+  document.getElementById('lbPrev').addEventListener('click', function(){
+    lbCurrent = (lbCurrent - 1 + lbImages.length) % lbImages.length;
+    renderLightbox();
+  });
+
+  document.getElementById('lightbox').addEventListener('click', function(e){
+    if(e.target === this) closeLightbox();
+  });
+
+  var touchStartX = 0;
+  document.getElementById('lightbox').addEventListener('touchstart', function(e){
+    touchStartX = e.changedTouches[0].screenX;
+  }, {passive:true});
+  document.getElementById('lightbox').addEventListener('touchend', function(e){
+    var diff = touchStartX - e.changedTouches[0].screenX;
+    if(Math.abs(diff) > 50){
+      if(diff > 0){lbCurrent = (lbCurrent + 1) % lbImages.length;}
+      else{lbCurrent = (lbCurrent - 1 + lbImages.length) % lbImages.length;}
+      renderLightbox();
+    }
+  }, {passive:true});
+
+  document.addEventListener('keydown', function(e){
+    if(!document.getElementById('lightbox').classList.contains('open')) return;
+    if(e.key === 'ArrowRight'){lbCurrent = (lbCurrent + 1) % lbImages.length; renderLightbox();}
+    if(e.key === 'ArrowLeft'){lbCurrent = (lbCurrent - 1 + lbImages.length) % lbImages.length; renderLightbox();}
+    if(e.key === 'Escape') closeLightbox();
+  });
+})();
+</script>
+
+</body>
+</html>
+
